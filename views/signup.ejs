@@ -1,0 +1,23 @@
+<% include _header %>
+
+
+<nav>
+  <ul>
+    <% if (currentUser) { %>
+    <li><a href="/logout">Log out</a></li>
+    <% } else { %>
+    <li><a href="/login">Log in</a></li>
+    <% } %>
+  </ul>
+</nav>
+
+<h1>Sign up</h1>
+
+<form action="/signup" method="post">
+  <input name="firstname" type="text" placeholder="First Name" required autofocus />
+  <input name="lastname" type="text" placeholder="Last Name" required />
+  <input name="email" type="text" placeholder="Email" required />
+  <input name="password" type="password" placeholder="Password" required>
+  <input type="submit" value="Sign up">
+</form>
+<% include _footer %>

@@ -1,0 +1,123 @@
+
+*{
+
+  margin:0;
+  padding:0;
+}
+
+body{
+  margin:0;
+  padding:0;
+}
+
+
+
+h1, h2
+{
+  text-align: center;
+  clear:both;
+}
+
+.margin_10
+{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+nav ul
+{
+  list-style-type: none;
+  height:38px;
+  background-color: black;
+  margin:0;
+  padding:0;
+  padding-right: 50px;
+
+}
+
+nav ul li
+{
+  display:inline;
+  padding: 0;
+  margin:0;
+  color:white;
+  float:right;
+}
+
+nav ul li a
+{
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none;
+  color:white;
+}
+nav ul li a:visited
+{
+  color:white;
+}
+
+nav ul li a:hover
+{
+  background-color: white;
+  color:black;
+}
+
+form
+{
+  width:50%;
+  margin:auto;
+  align-items: center;
+}
+
+form input{
+margin: auto;
+display: block;
+margin-top:5px;
+padding:5px;
+}
+
+.contacts-list
+{
+
+}
+
+.contacts-list ul
+{
+
+  list-style: none;
+  margin:0px;
+  margin-top: 20px;
+}
+
+.contacts-list li
+{
+  font-size: 20px;
+  font-family: arial;
+  text-align: center;
+}
+
+
+.link-center
+{
+  font-size:14px;
+  font-family: arial;
+  padding:5px;
+  
+
+  background-color: lightblue;
+  border: 1px solid lightblue;
+  text-decoration: none;
+  color:blue;
+  text-align: center;
+  border-radius: 5px 5px;
+}
+
+.link-center:visited{
+  color:blue;
+}
+
+.link-center:hover {
+  background-color: blue;
+  color:white;
+}

@@ -1,0 +1,27 @@
+<% include _header %>
+
+<nav>
+  <ul>
+    <% if (currentUser) { %>
+
+    <li><a href="/logout">Logout</a></li>
+    <li><a href="/">Back to Contacts</a></li>
+    <% } %>
+  </ul>
+</nav>
+
+<h1>Add New Contact</h1>
+<form action="/addContact" method = "post">
+  <input type = "text" name="firstname" placeholder = "First Name" autofocus/>
+  <input type = "text" name="lastname" placeholder = "Last Name"/>
+  <input type = "text" name="organization" placeholder = "Organization" />
+  <input type = "text" name="phoneNumber" placeholder = "Phone Number" />
+  <input type = "text" name="email" placeholder = "email" / >
+  <input type = "text" name="streetAddress" placeholder = "Street Address" />
+  <input type = "text" name="city" placeholder = "City" />
+  <input type = "text" name="state" placeholder = "State" />
+  <input type = "text" name="country" placeholder = "Country" />
+  <input type = "text" name="zipcode" placeholder = "zipcode" />
+  <input class="link-center" type = "submit" value="Add Contact" />
+</form>
+<% include _footer %>

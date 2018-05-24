@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Social Media App</title>
+    <link rel="stylesheet" type="text/css" href="/public/styles.css">
+  </head>
+  <body>
+
+
+
+    <% errors.forEach(function(error) { %>
+    <div>
+      <%= error %>
+    </div>
+    <% }) %>
+    <% infos.forEach(function(info) {%>
+      <div>
+        <%= info %>
+      </div>
+    <% }) %>

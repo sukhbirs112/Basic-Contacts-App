@@ -1,0 +1,47 @@
+<% include _header %>
+
+<nav>
+  <ul>
+    <% if (currentUser) { %>
+
+    <li><a href="/logout">Logout</a></li>
+    <li><a href="/addContact">Add New Contact</a></li>
+    <% } %>
+  </ul>
+</nav>
+
+<h1>Welcome <%= currentUser.firstName %>,</h1>
+
+<h2 class="margin_10">Your Contacts Are Listed Below</h2>
+
+
+<div class = "contacts-list">
+  <% currentUser.contactList.forEach( function(contact) { %>
+
+    <ul>
+      <li>First Name: <%= contact.firstName %></li>
+      <li>Last Name: <%= contact.lastName %></li>
+      <li>Organization: <%= contact.organization %></li>
+      <li>Phone: <%= contact.phoneNumber %></li>
+      <li>Email: <%= contact.email %></li>
+      <li>Street Address: <%= contact.streetAddress %></li>
+      <li>City: <%= contact.city %></li>
+      <li>State: <%= contact.state %></li>
+      <li>Country: <%= contact.country %></li>
+      <li>Zipcode: <%= contact.zipcode %></li>
+      <form action="/delete" method="post">
+        <input type="hidden" name="contact_id" value="<%= contact.id %>" />
+        <input class="link-center" type="submit" value="Delete Contact" />
+      </form>
+      <form action="/editContact" method="get">
+        <input type="hidden" name="contact_id" value="<%= contact.id %>" />
+        <input class="link-center" type="submit" value="Edit Contact" />
+      </form>
+    </ul>
+
+
+  <% }) %>
+
+</div>
+
+<% include _footer %>

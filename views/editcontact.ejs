@@ -1,0 +1,30 @@
+
+
+<% include _header %>
+
+<nav>
+  <ul>
+    <% if (currentUser) { %>
+
+    <li><a href="/logout">Logout</a></li>
+    <li><a href="/">Back to Contacts</a></li>
+    <% } %>
+  </ul>
+</nav>
+
+<h1>Edit Contact</h1>
+<form action="/editContact" method = "post">
+  <input type = "text" name="firstname" placeholder = "First Name" value="<%= contact.firstName %>" autofocus/>
+  <input type = "text" name="lastname" placeholder = "Last Name" value="<%= contact.lastName %>"/>
+  <input type = "text" name="organization" placeholder = "Organization" value="<%= contact.organization %>" />
+  <input type = "text" name="phoneNumber" placeholder = "Phone Number" value="<%= contact.phoneNumber %>" />
+  <input type = "text" name="email" placeholder = "email" value="<%= contact.email %>" />
+  <input type = "text" name="streetAddress" placeholder = "Street Address" value="<%= contact.streetAddress %>" />
+  <input type = "text" name="city" placeholder = "City" value="<%= contact.city %>" />
+  <input type = "text" name="state" placeholder = "State" value="<%= contact.state %>" />
+  <input type = "text" name="country" placeholder = "Country" value="<%= contact.country %>" />
+  <input type = "text" name="zipcode" placeholder = "zipcode" value="<%= contact.zipcode %>" />
+  <input class="link-center" type = "submit" value="Submit Changes to Contact" />
+  <input type = "hidden" name="contact_id" value="<%= contact._id %>">
+</form>
+<% include _footer %>
